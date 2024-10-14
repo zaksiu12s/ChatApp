@@ -1,0 +1,30 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/server.js",
+  "scripts": {
+    "tailwind-start": "npx tailwindcss -i ./tailwind/input.css -o ./public/output.css --watch",
+    "frontend-build": "tsc -p tsconfig.frontend.json --watch",
+    "backend-build": "tsc -p tsconfig.backend.json --watch",
+    "start-server": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.1",
+    "socket.io": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.7.5",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.7",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.IO Client</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <div class="flex h-screen max-w-[1000px] mx-auto">
+      <div class="w-max flex justify-center">
+        <div class="user-list"></div>
+      </div>
+
+      <div class="flex flex-1 flex-col bg-green-300 text-white p-5">
+        <div class="chat-header">
+          <h2>Chat with John Doe</h2>
+        </div>
+
+        <div
+          class="flex flex-col gap-2 overflow-y-auto"
+          id="chat-messages"
+        ></div>
+
+        <div class="mt-auto flex gap-3">
+          <input
+            class="flex-1 text-green-400"
+            type="text"
+            id="message-input"
+            placeholder="Write a message..."
+          />
+          <button
+            type="button"
+            onclick="sendMessage()"
+            id="send-button"
+            class="aspect-square bg-green-600 p-3 rounded-full font-bold"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
